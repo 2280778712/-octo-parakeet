@@ -1,0 +1,15 @@
+<svg 
+ width="800" height="1000" >
+    <symbol id="sym01" >
+      <rect width="15" height="15" style="fill:rgb(0,0,0)" />
+    </symbol>
+     <use xlinkHref="#sym01" x="0" y="0" />
+     <use xlinkHref="#sym01" x="15" y="15" />
+     <use xlinkHref="#sym01" x="30" y="30" />
+     <use xlinkHref="#sym01" x="45" y="45" />
+     <use xlinkHref="#sym01" x="60" y="60" />
+     <use xlinkHref="#sym01" x="60" y="0" />
+     <use xlinkHref="#sym01" x="45" y="15" />
+     <use xlinkHref="#sym01" x="15" y="45" />
+     <use xlinkHref="#sym01" x="0" y="60" />
+    </svg>

@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+ width="800" height="1000" >
+    <symbol id="sym01" >
+      <rect width="13" height="13" style="fill:rgb(0,0,0)" />
+    </symbol>
+     <use xlink:href="#sym01" x="0" y="60" />
+     <use xlink:href="#sym01" x="15" y="45" />
+     <use xlink:href="#sym01" x="30" y="30" />
+     <use xlink:href="#sym01" x="45" y="15" />
+     <use xlink:href="#sym01" x="15" y="60" />
+     <use xlink:href="#sym01" x="30" y="45" />
+     <use xlink:href="#sym01" x="45" y="30" />
+     <use xlink:href="#sym01" x="30" y="60" />
+     <use xlink:href="#sym01" x="45" y="45" />
+     <use xlink:href="#sym01" x="45" y="60" />
+     <use xlink:href="#sym01" x="15" y="75" />
+     <use xlink:href="#sym01" x="30" y="90" />
+     <use xlink:href="#sym01" x="45" y="105"/>
+     <use xlink:href="#sym01" x="30" y="75" />
+     <use xlink:href="#sym01" x="45" y="90" />
+     <use xlink:href="#sym01" x="45" y="75" />
+</svg>
