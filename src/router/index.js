@@ -4,6 +4,7 @@ import PageTransition from '@/components/transform'
 import Firstpage from "@/components/first_page/first_page"
 import Contract from "@/components/first_page/contract"
 import Home from "@/components/home/home"
+import Secondpage from "@/components/second_page/second_page"
 
 VueRouter.prototype.goBack = function () {
   this.isBack = true
@@ -27,10 +28,14 @@ const routes = [
             },{
                 path:'/contract',
                 component:Contract
+            },{
+                path:'/secondpage',
+                component:Secondpage
             }]
-    },,{
-            path:'/contract',
-            component:Contract
+    },{
+            path:'/secondpage',
+            name:'Secondpage',
+            component:Secondpage
     }
 ]
 

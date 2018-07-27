@@ -7,7 +7,7 @@
 				<h2 :style="{color:colorp}">地图</h2>
 			</div>
 		</router-link>
-		<router-link to="/contract">
+		<router-link to="/secondpage">
 			<div class="test box2">
 				<h2>成员</h2>
 			</div>
@@ -61,7 +61,7 @@ display: flex;
 flex-wrap: nowrap;
 flex-direction: row;
 justify-content:space-around;
-z-index: 999;
+z-index: 120;
 }
 .test{
 margin-top: 1.7rem;

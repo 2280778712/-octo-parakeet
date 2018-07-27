@@ -19,12 +19,7 @@ export default {
   data () {
     return {
       obj:{
-        // height: document.documentElement.clientHeight - 5 + 'px'
-        // height:'100vh'
-        // height:document.body.clientHeight + 'px'
-        height:window.screen.availHeight +'px'
-          // height:document.body.offsetHeight + 'px'
-          // height:document.body.scrollHeight + 'px'
+        height:window.screen.availHeight + 'px'
         },
       fontcolor:"white",
       status:{
