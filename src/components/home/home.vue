@@ -1,37 +1,36 @@
 <template>
-  <div id="app" v-bind:style="obj">
-    <app-nav :colorp="'fontcolor'"></app-nav>
-  </div>
+	<div class="home" v-bind:style="obj">
+		<app-nav></app-nav>
+		<h1>Welcome To Homyit</h1>
+	</div>
 </template>
 
 <script>
-import Nav  from '@/components/navs'
-export default {
-  name: 'App',
-  data () {
-    return {
-      obj:{
-        height: document.documentElement.clientHeight + 'px'
-        },
-      fontcolor:"white"
-    }
-  },
-  methods:{
-
-  },
-  components: {
-  	"app-nav" : Nav
-  }
+export default{
+	name:'home',
+	data(){
+		return{
+		obj:{
+        		// height: document.documentElement.clientHeight - 5 + 'px'
+        		// height:'100vh'
+        		// height:document.body.clientHeight + 'px'
+        height:window.screen.availHeight +'px'
+        // height:document.body.offsetHeight + 'px'
+        // height:document.body.scrollHeight + 'px'
+        	}
+		}
+	}
 }
 </script>
 
 <style scoped>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: black;
-  background: url('~@/assets/img/secbg.jpg') center 70% no-repeat;
-}
+	.home{
+  		background: url('~@/assets/img/secbg.jpg') center 100% no-repeat;
+  		background-size: cover;
+		width: 100%;
+	}
+	.home h1{
+		text-align: center;
+		margin-top: 50%;
+	}
 </style>

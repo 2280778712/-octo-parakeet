@@ -4,13 +4,13 @@
     <transition name="drop">
     <div class="dialog-content" :style="{top:topDistance+'%',width:widNum+'%',left:leftSite+'%'}" v-if="isShow">
         <div class="dialog_head">
-            <slot name="header">提示信息</slot>
+            <slot name="header"></slot>
         </div>
           <div class="dialog_main" :style="{paddingTop:pdt+'px',paddingBottom:pdb+'px'}">
-            <slot name="main">弹窗内容</slot>
+            <slot name="main"></slot>
           </div>
           <div class="foot_close" @click="closeMyself">
-              <div class="close_img back">关闭弹窗</div>
+              <div class="close_img back"></div>
           </div>
         </div>
     </transition>
@@ -19,37 +19,41 @@
 
 <script>
 export default{
+  data(){
+    return{
+      
+    }
+  },
 	methods: {
 	    closeMyself() {
 	      this.$emit("on-close");
 		    }
 		},
 	props: {
-	    isShow:{ 
-		      type: Boolean,
-		      default: false,
-		      required: true
-	    },
-	    widNum:{ 
-		      type: Number,
-		      default:86.5
-	    },
-	    leftSite:{
-		      type: Number,
-		      default:6.5
-	    },
-	    topDistance: {
-		      type: Number,
-		      default:35
-	    },
-	    pdt:{
-		      type: Number,
-		      default:22
-	    },
-	    pdb:{
-		      type: Number,
-		      default:47
-	    }
+  	    isShow:{ 
+  		      type: Boolean,
+  		      required: true
+  	    },
+  	    widNum:{ 
+  		      type: Number,
+  		      default:86.5
+  	    },
+  	    leftSite:{
+  		      type: Number,
+  		      default:6.5
+  	    },
+  	    topDistance: {
+  		      type: Number,
+  		      default:35
+  	    },
+  	    pdt:{
+  		      type: Number,
+  		      default:22
+  	    },
+  	    pdb:{
+  		      type: Number,
+  		      default:47
+  	    }
   		}
 	}
 </script>
@@ -59,14 +63,14 @@ export default{
     position: relative;
     color: black;
     font-size: 1rem;
-    width: 100%;
-    height: 200px;
   }
   .dialog_head{
-  	background-color: yellow;
+    position: absolute;
+    top:2rem;
+    left: 4rem;
   }
-  .dialog-cover {
-    /*background: rgba(0,0,0, 0.8);*/
+  .dialog-cover{
+    background: rgba(255,255,255, 0.5);
     position: fixed;
     z-index: 200;
     top: 0;
@@ -77,16 +81,28 @@ export default{
   .dialog-content{
     position: fixed;
     top: 35%;
+    height: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 300;
-    background-color: white;
+    background:url('~@/assets/img/bigwindow.png') center center no-repeat;
+    background-size: cover;
+ }
+ .dialog_main{
+  position: absolute;
+  top: 3.7rem;
+  padding: 0.8rem;
+  text-align: justify;
+  text-indent: 2em;
  }
  .foot_close{
- 	width: 50%;
- 	height: 20px;
- 	background-color: red;
+ 	width: 3.1rem;
+ 	height: 4.5rem;
+  position: absolute;
+  float: left;
+  top:0rem;
+  left:17.2rem;
  }
 </style>

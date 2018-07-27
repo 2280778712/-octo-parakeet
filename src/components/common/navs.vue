@@ -2,25 +2,25 @@
 	<div class="navs">
 	<div class="logo"></div>
 	<div class="nav">
-		<router-link to="/home">
+		<router-link to="/firstpage">
 			<div class="test box1">
 				<h2 :style="{color:colorp}">地图</h2>
 			</div>
 		</router-link>
-		<router-link to="/home">
+		<router-link to="/contract">
 			<div class="test box2">
 				<h2>成员</h2>
 			</div>
 		</router-link>
-		<router-link to="/home">
+		<router-link to="/firstpage">
 			<div class="test spe"></div>
 		</router-link>
-		<router-link to="/home">
+		<router-link to="/firstpage">
 			<div class="test box3">
 				<h2>生活</h2>
 			</div>
 		</router-link>
-		<router-link to="/home">
+		<router-link to="/firstpage">
 			<div class="test box4">
 				<h2>项目</h2>
 			</div>
@@ -43,13 +43,13 @@ export default{
 
 <style scoped>
 .logo{
-	width: 70%;
-	height: 7rem;
-	position: absolute;
-	left:15%;
-	top: 3rem;
-	background:url('~@/assets/img/logo.png') center center no-repeat;
-	background-size: 100%;
+width: 70%;
+height: 8rem;
+position: absolute;
+left:15%;
+top: 0rem;
+background:url('~@/assets/img/logo.png') center center no-repeat;
+background-size: 100%;
 }
 .nav{
 width: 100%;
@@ -61,6 +61,7 @@ display: flex;
 flex-wrap: nowrap;
 flex-direction: row;
 justify-content:space-around;
+z-index: 999;
 }
 .test{
 margin-top: 1.7rem;
@@ -68,7 +69,7 @@ width: 3.5rem;
 height: 3.5rem;
 background-color: brown;
 float: left;
-border-radius: 8px;
+border-radius: 10px;
 box-shadow: -0.4em 0.3em 0.6rem black;
 }
 .spe{
@@ -98,4 +99,6 @@ background-size:cover;
 	margin-top: 3.5rem;
 	font-size: 1.3rem;
 }
+/*>1.7*/
+/*<1.9*/
 </style>
