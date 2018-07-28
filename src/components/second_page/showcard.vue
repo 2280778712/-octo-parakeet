@@ -27,7 +27,7 @@ export default {
         allpictures:[
                      [['/static/img/16-1-0.png','/static/img/16-1-1.png'],
                       ['/static/img/16-2-0.png','/static/img/16-2-1.png'],
-                      ['/static/img/16-1-0.png','/static/img/16-1-1.png']],
+                      ['/static/img/16-3-0.png','/static/img/16-3-1.png']],
                      [['/static/img/17-1-0.png','/static/img/17-1-1.png'],
                       ['/static/img/17-2-0.png','/static/img/17-2-1.png'],
                       ['/static/img/17-3-0.png','/static/img/17-3-1.png']],

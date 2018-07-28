@@ -1,24 +1,25 @@
 <template>
 	<div id="secpage" v-bind:style="obj">
-    <app-nav :colorp="'fontcolor'"></app-nav>
+    <app-nav :colorp="fontcolor"></app-nav>
     <!-- <router-view></router-view> -->
-	<Show></Show>
+	<Card></Card>
 	</div>
 </template>
 
 <script>
-import Show from './showcard.vue'
+import Card from './card.vue'
 export default{
 name:'secpage',
 	data(){
 		return{
 		obj:{
         	 height:window.screen.availHeight + 'px'
-        	}
+			},
+			fontcolor:"white"
 		}
 	},
 	components:{
-		Show
+		Card
 	}
 }
 </script>
@@ -26,7 +27,7 @@ name:'secpage',
 <style>
 	#secpage{
 		width:100%;
-  		background: url('~@/assets/img/secpage/thibg.jpg') center 100% no-repeat;
+  		background: url('~@/assets/img/secpage/secbg.jpg') center 100% no-repeat;
   		background-size: cover;
   	}
 </style>

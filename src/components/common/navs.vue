@@ -9,20 +9,20 @@
 		</router-link>
 		<router-link to="/secondpage">
 			<div class="test box2">
-				<h2>成员</h2>
+				<h2 :style="{color:colorp}">成员</h2>
 			</div>
 		</router-link>
 		<router-link to="/firstpage">
 			<div class="test spe"></div>
 		</router-link>
-		<router-link to="/firstpage">
+		<router-link to="/thirdpage">
 			<div class="test box3">
-				<h2>生活</h2>
+				<h2 :style="{color:colorp}">生活</h2>
 			</div>
 		</router-link>
 		<router-link to="/firstpage">
 			<div class="test box4">
-				<h2>项目</h2>
+				<h2 :style="{color:colorp}">项目</h2>
 			</div>
 		</router-link>
 	</div>
@@ -32,7 +32,12 @@
 <script>
 export default{
   name: 'navs',
-  props:["colorp"],
+  props:{
+	  colorp:{
+		type: String,
+		required:true
+	  }
+	},
   data(){
     return{
     	
@@ -70,6 +75,11 @@ height: 3.5rem;
 background-color: brown;
 float: left;
 border-radius: 10px;
+/* @font-face {
+	font-family: LockClock;
+	src: url('~@/static/font/LockClock.ttf');
+}
+font-family:LockClock; */
 box-shadow: -0.4em 0.3em 0.6rem black;
 }
 .spe{

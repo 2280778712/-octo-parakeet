@@ -12,7 +12,7 @@ export default {
   data () {
     return {
       obj: {
-        height:window.screen.availHeight - 5 + 'px'
+        height:window.screen.availHeight + 'px'
       }
     }
   },

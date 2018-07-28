@@ -5,6 +5,8 @@ import Firstpage from "@/components/first_page/first_page"
 import Contract from "@/components/first_page/contract"
 import Home from "@/components/home/home"
 import Secondpage from "@/components/second_page/second_page"
+import Thirdpage from "@/components/third_page/third_page"
+
 
 VueRouter.prototype.goBack = function () {
   this.isBack = true
@@ -31,12 +33,19 @@ const routes = [
             },{
                 path:'/secondpage',
                 component:Secondpage
+            },{
+                path:'/thirdpage',
+                component:Thirdpage
             }]
     },{
             path:'/secondpage',
             name:'Secondpage',
             component:Secondpage
-    }
+    },{
+        path:'/thirdpage',
+        name:'Thirdpage',
+        component:Thirdpage
+}
 ]
 
 

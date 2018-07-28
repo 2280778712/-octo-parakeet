@@ -1,26 +1,32 @@
 <template>
-  <div class="hello">
-    <button @click="clickme">{{ count }}</button>
+  <div class="hello" :style="obj">
+      <div class="show">
+
+      </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
+  name: 'Hello',
+  data(){
     return {
-      count:0
+        obj:{
+        	 height:window.screen.availHeight + 'px'
+        	}
+		  }
     }
   },
   methods:{
-    clickme:function(){
-      this.count++
-    }
+
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  .hello{
+    width: 100%;
+    background-color: black;
+  }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div id="firpage" v-bind:style="obj">
-    <app-nav :colorp="'fontcolor'"></app-nav>
+    <app-nav :colorp="fontcolor"></app-nav>
     <Popup :is-show="status.isShowPublish" :top-distance="status.topNum" @on-close="closeDialog">
       <h2 slot="header">{{ info.title }}</h2>
       <p slot="main">{{ info.content }}</p>
@@ -15,13 +15,13 @@
 <script>
 import Popup from '../common/zi.vue'
 export default {
-  name: 'firpage',
-  data () {
-    return {
+  name:'firpage',
+  data(){
+    return{
       obj:{
         height:window.screen.availHeight + 'px'
         },
-      fontcolor:"white",
+      fontcolor:"black",
       status:{
           isShowPublish:false,
           topNum:10
@@ -86,7 +86,8 @@ export default {
   background: url('~@/assets/img/island1.png') center center no-repeat;
   background-size: 100%;
   position: absolute;
-  top: 7rem;
+  /*top: 7rem;*/
+  top:18%;
   left: 46%;
   z-index: 10;
 }
@@ -96,7 +97,8 @@ export default {
   background: url('~@/assets/img/island2.png') center center no-repeat;
   background-size: 100%;
   position: absolute;
-  top: 13.5rem;
+  /*top: 13.5rem;*/
+  top:32%;
   left: 30%;
   z-index: 12;
 }
@@ -106,8 +108,9 @@ export default {
   background: url('~@/assets/img/island3.png') center center no-repeat;
   background-size: 100%;
   position: absolute;
-  top: 19rem;
-  left: 22%;
+  /*top: 19rem;*/
+  top:45%;
+  left: 23%;
 }
 .box4{
   /*2.6:1;*/
@@ -117,7 +120,8 @@ export default {
   background-size: 100%;
   position: absolute;
   display: inline-block;
-  top:27.9rem;
+  /*top:27.9rem;*/
+  top:68%;
   left: 0;
   z-index: 5;
 }

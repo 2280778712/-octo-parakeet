@@ -35,7 +35,7 @@ export default {
         allpictures:[
                      [['/static/cardimg/16-1-0.png','/static/cardimg/16-1-1.png'],
                       ['/static/cardimg/16-2-0.png','/static/cardimg/16-2-1.png'],
-                      ['/static/cardimg/16-1-0.png','/static/cardimg/16-1-1.png']],
+                      ['/static/cardimg/16-3-0.png','/static/cardimg/16-3-1.png']],
                      [['/static/cardimg/17-1-0.png','/static/cardimg/17-1-1.png'],
                       ['/static/cardimg/17-2-0.png','/static/cardimg/17-2-1.png'],
                       ['/static/cardimg/17-3-0.png','/static/cardimg/17-3-1.png']],
@@ -153,9 +153,9 @@ span{border: 1px solid black;width: 20px;}
     backface-visibility: hidden;
     transition: 1s;
     transform: rotateY(0deg);
-    background-color: pink;
+    /* background-color: pink; */
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 .courseAfter{
     width: 100%;
@@ -164,14 +164,14 @@ span{border: 1px solid black;width: 20px;}
     top:0;
     left: 10%;
     color: #fff;
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
     text-indent: 2em;
     transform: rotateY(-180deg);
     backface-visibility: hidden;
     transition: 1s;
     background-repeat: no-repeat;
     background-position: center center;
-    background-size: cover;
+    background-size: contain;
 }
 .courseLogo:hover .courseBefore{
     transform: rotateY(180deg);
