@@ -1,8 +1,12 @@
 <template>
-  <div class="dialog">
+  <div class="dialog" v-if="isShow">
+    <!-- <h3>{{ backimg() }}</h3> -->
     <div class="dialog-cover back" v-if="isShow" @click="closeMyself"></div>
     <transition name="drop">
-    <div class="dialog-content" :style="{top:topDistance+'%',width:widNum+'%',left:leftSite+'%'}" v-if="isShow">
+    <div class="dialog-content" :style="{top:topDistance+'%',width:widNum+'%',
+    left:leftSite+'%',backgroundImage: 'url(' + backimg + ')',
+    height:boxHeight+'rem'}" v-if="isShow">
+        <slot name="box"></slot>
         <div class="dialog_head">
             <slot name="header"></slot>
         </div>
@@ -21,15 +25,23 @@
 export default{
   data(){
     return{
-      
+      // backimg: '../../../static/img/bigwindow.png'
     }
   },
 	methods: {
-	    closeMyself() {
+	    closeMyself(){
 	      this.$emit("on-close");
-		    }
+        }
 		},
 	props: {
+        backimg:{
+          type: String
+          // ,required:true
+        },
+        boxHeight:{
+          type: Number,
+          required: true
+        },
   	    isShow:{ 
   		      type: Boolean,
   		      required: true
@@ -81,14 +93,15 @@ export default{
   .dialog-content{
     position: fixed;
     top: 35%;
-    height: 30rem;
+    /* height: 30rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 300;
-    background:url('~@/assets/img/bigwindow.png') center center no-repeat;
-    background-size: cover;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
  }
  .dialog_main{
   position: absolute;

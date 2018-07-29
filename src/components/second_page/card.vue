@@ -23,25 +23,28 @@ export default {
         return {
         times:0,//点击左右按钮次数，初始值为0
         
-        frontColor:"black",
-        targetFront:"/static/cardimg/16-1-0.png",//初始图片16级第一张正面
-        targetBack :"/static/cardimg/16-1-1.png",
-        picture:['/static/cardimg/16-1-0.png','/static/cardimg/16-1-1.png'],
+        frontStyle:'',
+        afterStyle:'',
 
-        pictures:[['/static/cardimg/16-1-0.png','/static/cardimg/16-1-1.png'],
-                  ['/static/cardimg/16-2-0.png','/static/cardimg/16-2-1.png'],
-                  ['/static/cardimg/16-3-0.png','/static/cardimg/16-3-1.png']
+        frontColor:"black",
+        targetFront:"/static/img/cardimg/16-1-0.png",//初始图片16级第一张正面
+        targetBack :"/static/img/cardimg/16-1-1.png",
+        picture:['/static/img/cardimg/16-1-0.png','/static/img/cardimg/16-1-1.png'],
+
+        pictures:[['/static/img/cardimg/16-1-0.png','/static/img/cardimg/16-1-1.png'],
+                  ['/static/img/cardimg/16-2-0.png','/static/img/cardimg/16-2-1.png'],
+                  ['/static/img/cardimg/16-3-0.png','/static/img/cardimg/16-3-1.png']
              ],//初始切换卡片为16级三张
         allpictures:[
-                     [['/static/cardimg/16-1-0.png','/static/cardimg/16-1-1.png'],
-                      ['/static/cardimg/16-2-0.png','/static/cardimg/16-2-1.png'],
-                      ['/static/cardimg/16-3-0.png','/static/cardimg/16-3-1.png']],
-                     [['/static/cardimg/17-1-0.png','/static/cardimg/17-1-1.png'],
-                      ['/static/cardimg/17-2-0.png','/static/cardimg/17-2-1.png'],
-                      ['/static/cardimg/17-3-0.png','/static/cardimg/17-3-1.png']],
-                     [['/static/cardimg/15-1-0.png','/static/cardimg/15-1-1.png'],
-                      ['/static/cardimg/15-2-0.png','/static/cardimg/15-2-1.png'],
-                      ['/static/cardimg/15-3-0.png','/static/cardimg/15-3-1.png']]],
+                     [['/static/img/cardimg/16-1-0.png','/static/img/cardimg/16-1-1.png'],
+                      ['/static/img/cardimg/16-2-0.png','/static/img/cardimg/16-2-1.png'],
+                      ['/static/img/cardimg/16-3-0.png','/static/img/cardimg/16-3-1.png']],
+                     [['/static/img/cardimg/17-1-0.png','/static/img/cardimg/17-1-1.png'],
+                      ['/static/img/cardimg/17-2-0.png','/static/img/cardimg/17-2-1.png'],
+                      ['/static/img/cardimg/17-3-0.png','/static/img/cardimg/17-3-1.png']],
+                     [['/static/img/cardimg/15-1-0.png','/static/img/cardimg/15-1-1.png'],
+                      ['/static/img/cardimg/15-2-0.png','/static/img/cardimg/15-2-1.png'],
+                      ['/static/img/cardimg/15-3-0.png','/static/img/cardimg/15-3-1.png']]],
         }
     },
     methods:{
@@ -56,7 +59,7 @@ export default {
             this.times = 0;
             this.pictures = this.allpictures[1];
             this.picture  = this.pictures[0];
-            this.targetFront  = this.picture[0];
+            this.targetFront = this.picture[0];
             this.targetBack  =  this.picture[1];
 
         },
@@ -108,10 +111,8 @@ export default {
                     this.targetBack = this.picture[1];
                 }
             }
-        },
-
+        }
     },
-
     computed:{
         activeColor(){
             return this.frontColor;
@@ -127,7 +128,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 span{border: 1px solid black;width: 20px;}
  
@@ -139,7 +139,7 @@ span{border: 1px solid black;width: 20px;}
     top: 22%;
     left: 2.65rem;
     box-sizing: border-box;
-    /*perspective: 800px;*/
+    /* perspective: 800px; */
 }
 
 .courseBefore{
@@ -153,7 +153,6 @@ span{border: 1px solid black;width: 20px;}
     backface-visibility: hidden;
     transition: 1s;
     transform: rotateY(0deg);
-    /* background-color: pink; */
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -164,7 +163,6 @@ span{border: 1px solid black;width: 20px;}
     top:0;
     left: 10%;
     color: #fff;
-    /* background-color: dodgerblue; */
     text-indent: 2em;
     transform: rotateY(-180deg);
     backface-visibility: hidden;

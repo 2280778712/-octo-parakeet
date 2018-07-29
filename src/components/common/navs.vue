@@ -12,7 +12,7 @@
 				<h2 :style="{color:colorp}">成员</h2>
 			</div>
 		</router-link>
-		<router-link to="/firstpage">
+		<router-link to="/thirdpage">
 			<div class="test spe"></div>
 		</router-link>
 		<router-link to="/thirdpage">

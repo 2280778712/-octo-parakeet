@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import PageTransition from '@/components/transform'
+import PageTransition from '@/components/common/transform'
 import Firstpage from "@/components/first_page/first_page"
 import Contract from "@/components/first_page/contract"
 import Home from "@/components/home/home"
 import Secondpage from "@/components/second_page/second_page"
 import Thirdpage from "@/components/third_page/third_page"
+
 
 
 VueRouter.prototype.goBack = function () {

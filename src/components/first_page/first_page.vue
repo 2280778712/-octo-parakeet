@@ -1,7 +1,8 @@
 <template>
   <div id="firpage" v-bind:style="obj">
     <app-nav :colorp="fontcolor"></app-nav>
-    <Popup :is-show="status.isShowPublish" :top-distance="status.topNum" @on-close="closeDialog">
+    <Popup :is-show="status.isShowPublish" :top-distance="status.topNum"
+    :backimg="status.bgInfo" :boxHeight="status.boxHeight" @on-close="closeDialog">
       <h2 slot="header">{{ info.title }}</h2>
       <p slot="main">{{ info.content }}</p>
     </Popup>
@@ -24,7 +25,9 @@ export default {
       fontcolor:"black",
       status:{
           isShowPublish:false,
-          topNum:10
+          topNum:10,
+          bgInfo:'../../../static/img/bigwindow.png',
+          boxHeight:30
         },
         info:{
           title:'',
@@ -41,7 +44,7 @@ export default {
         houDuanInfo:{
             title:"工作室后端简介",
             content:"曾几何时为了兼容IE低版本浏览器而头痛，以为到Mobile时代可以跟这些麻烦说拜拜。可没想到到了移动时代，为了处理各终端的适配而乱了手脚。对于混迹各社区的偶，时常发现大家拿手机淘宝的H5页面做讨论"
-        }        
+        }
     }
   },
   methods:{
