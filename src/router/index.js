@@ -6,6 +6,8 @@ import Contract from "@/components/first_page/contract"
 import Home from "@/components/home/home"
 import Secondpage from "@/components/second_page/second_page"
 import Thirdpage from "@/components/third_page/third_page"
+import Fourpage from "@/components/four_page/four_page"
+
 
 
 
@@ -37,6 +39,9 @@ const routes = [
             },{
                 path:'/thirdpage',
                 component:Thirdpage
+            },{
+                path:'/fourpage',
+                component:Fourpage
             }]
     },{
             path:'/secondpage',
@@ -46,6 +51,10 @@ const routes = [
         path:'/thirdpage',
         name:'Thirdpage',
         component:Thirdpage
+},{
+    path:'/fourpage',
+    name:'Fourpage',
+    component:Fourpage
 }
 ]
 

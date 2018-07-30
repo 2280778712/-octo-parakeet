@@ -1,31 +1,34 @@
 <template>
   <div class="dialog" v-if="isShow">
-    <!-- <h3>{{ backimg() }}</h3> -->
-    <div class="dialog-cover back" v-if="isShow" @click="closeMyself"></div>
+    <div class="dialog-cover back" v-if="isShow" @click="closeMyself" :style="{background:coverColor}"></div>
     <transition name="drop">
     <div class="dialog-content" :style="{top:topDistance+'%',width:widNum+'%',
     left:leftSite+'%',backgroundImage: 'url(' + backimg + ')',
     height:boxHeight+'rem'}" v-if="isShow">
-        <slot name="box"></slot>
+        <div class="dialog_box">
+          <slot name="box"></slot>
+        </div>
         <div class="dialog_head">
             <slot name="header"></slot>
         </div>
-          <div class="dialog_main" :style="{paddingTop:pdt+'px',paddingBottom:pdb+'px'}">
+        <div class="dialog_main" :style="{paddingTop:pdt+'px',paddingBottom:pdb+'px'}">
             <slot name="main"></slot>
-          </div>
-          <div class="foot_close" @click="closeMyself">
+        </div>
+        <div class="dialog_img">
+            <slot name="proimg"></slot>
+        </div>
+        <div class="foot_close" @click="closeMyself" :style="{height:closeHeight+'rem',top:topDistance+'%'}">
               <div class="close_img back"></div>
-          </div>
+        </div>
         </div>
     </transition>
   </div>
-</template> 
+</template>
 
 <script>
 export default{
   data(){
     return{
-      // backimg: '../../../static/img/bigwindow.png'
     }
   },
 	methods: {
@@ -36,17 +39,19 @@ export default{
 	props: {
         backimg:{
           type: String
-          // ,required:true
+        },
+        coverColor:{
+          type:String
         },
         boxHeight:{
           type: Number,
           required: true
         },
-  	    isShow:{ 
+  	    isShow:{
   		      type: Boolean,
   		      required: true
   	    },
-  	    widNum:{ 
+  	    widNum:{
   		      type: Number,
   		      default:86.5
   	    },
@@ -64,8 +69,12 @@ export default{
   	    },
   	    pdb:{
   		      type: Number,
-  		      default:47
-  	    }
+  		      default:20
+        },
+        closeHeight:{
+          type: Number,
+          default:4
+        }
   		}
 	}
 </script>
@@ -78,11 +87,15 @@ export default{
   }
   .dialog_head{
     position: absolute;
-    top:2rem;
-    left: 4rem;
+    top:2.5rem;
+    left: 3rem;
+  }
+  .dialog_box{
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
   .dialog-cover{
-    background: rgba(255,255,255, 0.5);
     position: fixed;
     z-index: 200;
     top: 0;
@@ -93,29 +106,37 @@ export default{
   .dialog-content{
     position: fixed;
     top: 35%;
-    /* height: 30rem; */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     z-index: 300;
-    background-size: 100%;
+    background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    overflow: auto;
  }
  .dialog_main{
-  position: absolute;
-  top: 3.7rem;
-  padding: 0.8rem;
+  float: left;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 10rem;
   text-align: justify;
   text-indent: 2em;
+ }
+ .dialog_img{
+   width:19rem;
+   height: 10rem;
+   margin-left: 0.6rem;
  }
  .foot_close{
  	width: 3.1rem;
  	height: 4.5rem;
-  position: absolute;
+  position: fixed;
   float: left;
-  top:0rem;
-  left:17.2rem;
+  left:18.5rem;
+  right: 0;
+  z-index: 100;
+  /* background-color: red; */
  }
 </style>

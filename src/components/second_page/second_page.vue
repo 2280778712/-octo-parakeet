@@ -1,5 +1,5 @@
 <template>
-	<div id="secpage" v-bind:style="obj">
+	<div id="secpage" :style="{height:$store.state.height}">
     <app-nav :colorp="fontcolor"></app-nav>
     <!-- <router-view></router-view> -->
 	<Card></Card>
@@ -12,9 +12,6 @@ export default{
 name:'secpage',
 	data(){
 		return{
-		obj:{
-        	 height:window.screen.availHeight + 'px'
-			},
 			fontcolor:"white"
 		}
 	},

@@ -20,7 +20,7 @@
 				<h2 :style="{color:colorp}">生活</h2>
 			</div>
 		</router-link>
-		<router-link to="/firstpage">
+		<router-link to="/Fourpage">
 			<div class="test box4">
 				<h2 :style="{color:colorp}">项目</h2>
 			</div>
@@ -40,7 +40,7 @@ export default{
 	},
   data(){
     return{
-    	
+
     }
   },
 }

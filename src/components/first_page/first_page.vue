@@ -1,8 +1,10 @@
 <template>
-  <div id="firpage" v-bind:style="obj">
+  <div id="firpage" :style="{height:$store.state.height}">
     <app-nav :colorp="fontcolor"></app-nav>
     <Popup :is-show="status.isShowPublish" :top-distance="status.topNum"
-    :backimg="status.bgInfo" :boxHeight="status.boxHeight" @on-close="closeDialog">
+    :backimg="status.bgInfo" :boxHeight="status.boxHeight"
+    :coverColor="status.coverColor"
+    @on-close="closeDialog">
       <h2 slot="header">{{ info.title }}</h2>
       <p slot="main">{{ info.content }}</p>
     </Popup>
@@ -19,15 +21,13 @@ export default {
   name:'firpage',
   data(){
     return{
-      obj:{
-        height:window.screen.availHeight + 'px'
-        },
       fontcolor:"black",
       status:{
           isShowPublish:false,
           topNum:10,
           bgInfo:'../../../static/img/bigwindow.png',
-          boxHeight:30
+          boxHeight:30,
+          coverColor:'rgba('+ 255 + ',' + 255 + ',' + 255 + ',' + 0.5 + ')'
         },
         info:{
           title:'',

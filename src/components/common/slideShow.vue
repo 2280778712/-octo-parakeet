@@ -39,9 +39,9 @@ export default {
     }
   },
   computed: {
-    prevIndex () {      
+    prevIndex () {
       if (this.nowIndex === 0) {
-        
+
         return this.slides.length - 1
       }
       else {
@@ -87,7 +87,6 @@ export default {
 	width:100%;
 	max-width:100%;
 	text-align:center;
-  /* transition: all 1s; */
 }
 .slide-img{
 	position:relative;
@@ -122,7 +121,7 @@ export default {
     margin-bottom: 20px;
    background: #2C3E50;
     opacity: .5;
-   
+
 }
 .slide-title a{
 	width: 70%;
@@ -136,7 +135,7 @@ export default {
 	padding-left: 20px;
 	text-overflow:ellipsis;
 	white-space:nowrap;
-	overflow:hidden; 
+	overflow:hidden;
 }
 @media screen and (max-width:600px){
 	.slide-title a{
@@ -190,7 +189,7 @@ export default {
 	font-weight:bolder;
 	display: none;
 	cursor: pointer;
-	
+
 }
 .callbacks-nav:active{opacity:1.0;}
 .slide-show:hover .callbacks-nav{display:block;}

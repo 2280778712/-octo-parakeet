@@ -1,6 +1,5 @@
 <template>
   <div id="app" v-bind:style="obj">
-    <!-- <Firpage></Firpage> -->
     <router-view></router-view>
   </div>
 </template>

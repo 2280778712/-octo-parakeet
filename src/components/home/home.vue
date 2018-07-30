@@ -1,5 +1,5 @@
 <template>
-	<div class="home" v-bind:style="obj">
+	<div class="home" :style="{height:$store.state.height}">
 		<app-nav></app-nav>
 		<h1>Welcome To Homyit</h1>
 	</div>
@@ -10,9 +10,6 @@ export default{
 	name:'home',
 	data(){
 		return{
-		obj:{
-        height:window.screen.availHeight +'px'
-        	}
 		}
 	}
 }
