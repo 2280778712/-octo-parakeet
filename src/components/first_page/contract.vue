@@ -9,7 +9,7 @@ export default{
 	name:"contract",
 	data () {
 		return {
-		
+
 		}
 	},
 	methods: {
@@ -24,7 +24,7 @@ export default{
 .contract{
 z-index: 100;
 width: 100%;
-background: url('~@/assets/img/contractUs.jpg') left bottom no-repeat;
+background: url('../../../static/img/contractUs.jpg') left bottom no-repeat;
 background-size: cover;
 }
 .left{

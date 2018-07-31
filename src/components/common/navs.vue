@@ -12,7 +12,7 @@
 				<h2 :style="{color:colorp}">成员</h2>
 			</div>
 		</router-link>
-		<router-link to="/thirdpage">
+		<router-link to="/">
 			<div class="test spe"></div>
 		</router-link>
 		<router-link to="/thirdpage">
@@ -53,7 +53,7 @@ height: 8rem;
 position: absolute;
 left:15%;
 top: 0rem;
-background:url('~@/assets/img/logo.png') center center no-repeat;
+background:url('../../../static/img/logo.png') center center no-repeat;
 background-size: 100%;
 }
 .nav{
@@ -86,23 +86,23 @@ box-shadow: -0.4em 0.3em 0.6rem black;
 width: 4.2rem;
 height: 4.2rem;
 margin-top: 1.3rem;
-background:url('~@/assets/img/mainbox.png') center center no-repeat;
+background:url('../../../static/img/mainbox.png') center center no-repeat;
 background-size:cover;
 }
 .box1{
-	background:url('~@/assets/img/box1.png') center center no-repeat;
+	background:url('../../../static/img/box1.png') center center no-repeat;
 	background-size:cover;
 }
 .box2{
-	background:url('~@/assets/img/box2.png') center center no-repeat;
+	background:url('../../../static/img/box2.png') center center no-repeat;
 	background-size:cover;
 }
 .box3{
-	background:url('~@/assets/img/box3.png') center center no-repeat;
+	background:url('../../../static/img/box3.png') center center no-repeat;
 	background-size:cover;
 }
 .box4{
-	background:url('~@/assets/img/box4.png') center center no-repeat;
+	background:url('../../../static/img/box4.png') center center no-repeat;
 	background-size:cover;
 }
 .test h2{

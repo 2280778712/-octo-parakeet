@@ -1,9 +1,9 @@
 <template>
   <div class="slide-show" @mouseover="clearInv" @mouseout="runInv">
     <div class="slide-img">
-        <transition name="slide-fade">
+        <!-- <transition name="slide-fade">
           <img v-if="isShow" :src="slides[nowIndex].src">
-        </transition>
+        </transition> -->
         <transition name="slide-fade-old">
           <img v-if="isShows" :src="slides[nowIndex].src">
         </transition>
@@ -35,13 +35,13 @@ export default {
     return {
       nowIndex: 0,
       isShow: true,
-      isShows:false
+      isShows: true
+      // isShows:false
     }
   },
   computed: {
     prevIndex () {
       if (this.nowIndex === 0) {
-
         return this.slides.length - 1
       }
       else {
@@ -200,5 +200,22 @@ export default {
 	left:auto;
 	right:0;
 }
-
+/* .slide-fade-enter-active, .slide-fade-old-enter-active {
+	  transition: opacity 1s;
+	}
+.slide-fade-enter, .slide-fade-old-leave-to {
+	  opacity: 0.5;
+	} */
+  /* .slide-fade-old-enter-active, .slide-fade-old-enter {
+	  transition: opacity 1s;
+	}
+  .slide-fade-old-leave-active, .slide-fade-old-leave-to {
+	  opacity: 0.1;
+	} */
+  .slide-fade-old-enter-active, .slide-fade-old-leave-active {
+  transition: opacity 2.5s;
+  }
+  .slide-fade-old-enter, .slide-fade-old-leave-to {
+    opacity: 0;
+  }
 </style>

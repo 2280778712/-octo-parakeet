@@ -7,6 +7,8 @@ import Home from "@/components/home/home"
 import Secondpage from "@/components/second_page/second_page"
 import Thirdpage from "@/components/third_page/third_page"
 import Fourpage from "@/components/four_page/four_page"
+import Test from "@/components/test"
+
 
 
 
@@ -55,6 +57,10 @@ const routes = [
     path:'/fourpage',
     name:'Fourpage',
     component:Fourpage
+},{
+  path:'/test',
+  name:'Test',
+  component:Test
 }
 ]
 

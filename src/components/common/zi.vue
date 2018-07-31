@@ -38,14 +38,14 @@ export default{
 		},
 	props: {
         backimg:{
-          type: String
+            type: String
         },
         coverColor:{
-          type:String
+            type:String
         },
         boxHeight:{
-          type: Number,
-          required: true
+            type: Number,
+            required: true
         },
   	    isShow:{
   		      type: Boolean,
@@ -128,6 +128,9 @@ export default{
    width:19rem;
    height: 10rem;
    margin-left: 0.6rem;
+ }
+ .dialog_box h2{
+   margin-top: 1rem;
  }
  .foot_close{
  	width: 3.1rem;

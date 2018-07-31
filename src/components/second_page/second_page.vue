@@ -24,7 +24,7 @@ name:'secpage',
 <style>
 	#secpage{
 		width:100%;
-  		background: url('~@/assets/img/secpage/secbg.jpg') center 100% no-repeat;
+  		background: url('../../../static/img/secpage/secbg.jpg') center 100% no-repeat;
   		background-size: cover;
   	}
 </style>

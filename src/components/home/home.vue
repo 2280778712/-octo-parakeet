@@ -1,6 +1,6 @@
 <template>
 	<div class="home" :style="{height:$store.state.height}">
-		<app-nav></app-nav>
+		<app-nav :colorp="fontcolor"></app-nav>
 		<h1>Welcome To Homyit</h1>
 	</div>
 </template>
@@ -10,14 +10,20 @@ export default{
 	name:'home',
 	data(){
 		return{
+        fontcolor:'red'
 		}
-	}
+  },
+  created(){
+    setTimeout(() => {
+      this.$router.push({path:'/firstpage'})
+    }, 2200)
+  }
 }
 </script>
 
 <style scoped>
 	.home{
-  		background: url('~@/assets/img/secbg.jpg') center 100% no-repeat;
+  		background: url('../../../static/img/secbg.jpg') center 100% no-repeat;
   		background-size: cover;
 		width: 100%;
 	}

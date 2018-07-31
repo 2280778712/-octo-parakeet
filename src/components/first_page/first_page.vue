@@ -79,14 +79,14 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: black;
-  background: url('~@/assets/img/secbg.jpg') center 100% no-repeat;
+  background: url('../../../static/img/secbg.jpg') center 100% no-repeat;
   background-size: cover;
 }
 .box1{
   width: 12rem;
   /*7:6*/
   height: 10.3rem;
-  background: url('~@/assets/img/island1.png') center center no-repeat;
+  background: url('../../../static/img/island1.png') center center no-repeat;
   background-size: 100%;
   position: absolute;
   /*top: 7rem;*/
@@ -97,7 +97,7 @@ export default {
 .box2{
   width: 6rem;
   height: 10rem;
-  background: url('~@/assets/img/island2.png') center center no-repeat;
+  background: url('../../../static/img/island2.png') center center no-repeat;
   background-size: 100%;
   position: absolute;
   /*top: 13.5rem;*/
@@ -108,7 +108,7 @@ export default {
 .box3{
   width: 17rem;
   height: 10rem;
-  background: url('~@/assets/img/island3.png') center center no-repeat;
+  background: url('../../../static/img/island3.png') center center no-repeat;
   background-size: 100%;
   position: absolute;
   /*top: 19rem;*/
@@ -119,7 +119,7 @@ export default {
   /*2.6:1;*/
   width:16rem;
   height:7rem;
-  background: url('~@/assets/img/contract.png') center center no-repeat;
+  background: url('../../../static/img/contract.png') center center no-repeat;
   background-size: 100%;
   position: absolute;
   display: inline-block;

@@ -6,7 +6,9 @@ import router from '@/router/index.js'
 import {store} from './store/store'
 import Navs from '@/components/common/navs'
 import '@/icons/index.js'
+import Axios from "axios"
 
+Vue.prototype.$axios = Axios
 Vue.component("app-nav",Navs)
 Vue.config.productionTip = false
 
