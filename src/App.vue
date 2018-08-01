@@ -1,5 +1,5 @@
 <template>
-  <div id="app" v-bind:style="obj">
+  <div id="app" :style="{height:$store.state.height}">
     <router-view></router-view>
   </div>
 </template>
@@ -11,7 +11,7 @@ export default {
   data () {
     return {
       obj: {
-        height:window.screen.availHeight + 'px'
+        // height:window.screen.availHeight + 'px'
       }
     }
   },

@@ -2,6 +2,10 @@
 	<div id="secpage" :style="{height:$store.state.height}">
     <app-nav :colorp="fontcolor"></app-nav>
     <!-- <router-view></router-view> -->
+	<div class="zuoyou">
+		
+	</div>
+	
 	<Card></Card>
 	</div>
 </template>

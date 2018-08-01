@@ -94,6 +94,7 @@ export default{
     position: absolute;
     width: 100%;
     height: 100%;
+    overflow: auto;
   }
   .dialog-cover{
     position: fixed;
@@ -114,7 +115,7 @@ export default{
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    overflow: auto;
+    /* overflow: auto; */
  }
  .dialog_main{
   float: left;

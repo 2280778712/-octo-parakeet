@@ -5,6 +5,6 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
     state:{
-        height:window.screen.availHeight + 'px'
+        height:window.innerHeight + 'px'
     }
 })

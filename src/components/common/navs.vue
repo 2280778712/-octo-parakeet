@@ -52,7 +52,7 @@ width: 70%;
 height: 8rem;
 position: absolute;
 left:15%;
-top: 0rem;
+top: -1.5rem;
 background:url('../../../static/img/logo.png') center center no-repeat;
 background-size: 100%;
 }

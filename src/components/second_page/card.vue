@@ -10,11 +10,11 @@
              v-on:click="clickImg" id="back" >
         </div>
     </div>
-        <span v-on:click="clickLeft" class="left">《《《</span>
-        <span v-on:click="clickRight" class="right">》》》</span>
-        <span v-on:click="clickSpan2016" class="class16">16级</span>
-        <span v-on:click="clickSpan2017" class="class17">17级</span>
-        <span v-on:click="clickSpanOthers" class="classOther">往届</span>
+        <div v-on:click="clickLeft" class="left"></div>
+        <div v-on:click="clickRight" class="right"></div>
+        <div v-on:click="clickSpan2016" class="class16"></div>
+        <div v-on:click="clickSpan2017" class="class17"></div>
+        <div v-on:click="clickSpanOthers" class="classOther"></div>
   </div>
 </template>
 
@@ -152,6 +152,8 @@ span{border: 1px solid black;width: 20px;}
     box-sizing: border-box;
     top: 20%;
     left: 10%;
+    z-index: 2;
+    /* margin-left: 2%; */
 }
 
 .courseBefore{
@@ -165,7 +167,6 @@ span{border: 1px solid black;width: 20px;}
     background-size: cover;
     backface-visibility: hidden;
     transition: 1s;
-    background-color: pink;
 }
 .courseAfter{
     width: 100%;
@@ -174,7 +175,6 @@ span{border: 1px solid black;width: 20px;}
     top:0;
     left: 10%;
     color: #fff;
-    background-color: dodgerblue;
     text-indent: 2em;
     transform: rotateY(-180deg);
     backface-visibility: hidden;
@@ -190,44 +190,61 @@ span{border: 1px solid black;width: 20px;}
 .courseLogo:hover .courseAfter{
     transform: rotateY(0deg);
 }
+
 .left{
-  width: 4rem;
-  height: 1.5rem;
-  background-color: red;
+ background-image: url('../../../static/img/arrow.png');
+ background-repeat: no-repeat;
+  width: 3rem;
+  height:3rem;
+  background-size: 50% 70%;
   position: absolute;
   top:50%;
-  left:0%;
+  left:6%;
 }
 .right{
-  width: 4rem;
-  height: 1.5rem;
-  background-color: red;
+background-image: url('../../../static/img/arrow2.png');
+  width: 3rem;
+  height: 3rem;
+ background-repeat: no-repeat;
+ background-size: 50% 70%;
   position: absolute;
   top:50%;
-  right:0%;
+  right: 0%;
 }
 .class16{
   width: 4rem;
   height: 1.5rem;
-  background-color: red;
+  background-image: url('../../../static/img/market16.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   top:25%;
-  left:5%;
+  left:3%;
+  z-index: 1;
 }
 .class17{
   width: 4rem;
   height: 1.5rem;
-  background-color: red;
+  background-image: url('../../../static/img/market17.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   top:30%;
-  left:5%;
+  left:3%;
+  z-index: 1;
 }
 .classOther{
   width: 4rem;
   height: 1.5rem;
-  background-color: red;
+  background-image:url('../../../static/img/market.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   top:35%;
-  left:5%;
+  left:3%;
+  z-index: 1;
 }
 </style>

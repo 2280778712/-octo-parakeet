@@ -7,18 +7,23 @@
       :coverColor="status.coverColor"
       :closeHeight="status.closeHeight"
       @on-close="closeDialog">
-      <div v-for="(value) in info" :key="value.id" slot="box" class="probox">
-        <h2 slot="header">{{ value.title }}</h2>
-        <p slot="main">{{ value.content }}</p>
-        <div class="proimg" :style="{backgroundImage:'url(' + value.proimg + ')'}" slot="proimg">
-        </div>
+      <div class="grandfather" slot="box">
+      <div v-for="(value) in info" :key="value.id" class="probox">
+          <div class="textboxfather">
+            <div class="textboxson">
+                <h2 slot="header">{{ value.title }}</h2>
+                <p slot="main">{{ value.content }}</p>
+                <div class="proimg" :style="{backgroundImage:'url(' + value.proimg + ')'}" slot="proimg">
+                </div>
+            </div>
+          </div>
+      </div>
       </div>
       </Popup>
             <div class="computer" @click="openDialog()">
               <img :src="src">
             </div>
             <div class="bookrack">
-              <img :src="bookrack">
             </div>
             <app-nav :colorp="fontcolor"></app-nav>
     </div>
@@ -85,16 +90,16 @@ z-index: 1;
 }
 .bookrack{
   height: 100%;
-  width: 50%;
+  width: 48%;
   position: absolute;
   right: 0;
+  margin-top: -3rem;
   animation: bounceInRight 1.5s 1;
+  background: url('../../../static/img/fourpage/shelfter.png') left center no-repeat;
+  background-size: cover;
   z-index: 0;
 }
-.bookrack img{
-  position: relative;
-  top: 2%;
-}
+
 .proimg{
   width:19rem;
   height: 10rem;
@@ -104,9 +109,11 @@ z-index: 1;
 }
 .probox{
   overflow: auto;
+  height: 100%;
+  width: 100%;
 }
 .probox h2{
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 .probox p{
   text-align: left;
@@ -118,6 +125,22 @@ z-index: 1;
 .probox .proimg{
   margin-top: 1rem;
   margin-left: 0.8rem;
+}
+.grandfather{
+  width: 100%;
+  height: 90%;
+  margin-top: 12%;
+  position: absolute;
+}
+.textboxfather{
+  overflow: auto;
+  height: 85%;
+  width: 100%;
+  margin-top: 12%;
+}
+.textboxson{
+  height: 80%;
+  width: 100%;
 }
 @keyframes bounceInUp {
 0%, 100%, 60%, 75%, 90% {

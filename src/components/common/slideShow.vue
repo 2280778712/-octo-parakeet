@@ -1,5 +1,5 @@
 <template>
-  <div class="slide-show" @mouseover="clearInv" @mouseout="runInv">
+  <div class="slide-show" @touchstart="clearInv" @touchend="runInv">
     <div class="slide-img">
         <!-- <transition name="slide-fade">
           <img v-if="isShow" :src="slides[nowIndex].src">
@@ -72,7 +72,27 @@ export default {
     },
     clearInv () {
       clearInterval(this.invId)
-    }
+    },
+    touchStart(ev){
+            ev = ev || event;
+            ev.preventDefault();
+            if(ev.targetTouches.length == 1){
+                this.startX = ev.targetTouches[0].clientX;
+            }
+        },
+        touchMove(ev){
+            ev = ev || event;
+            ev.preventDefault();
+            if(ev.targetTouches.length == 1){
+                this.moveX = ev.targetTouches[0].clientX;
+                this.disX = this.moveX - this.startX;
+                if(this.disX<0) {
+                  goto(nextIndex)
+                }else if(this.disX>0){
+                  goto(prevIndex)
+                }
+            }
+        }
   },
   mounted(){
     this.runInv();

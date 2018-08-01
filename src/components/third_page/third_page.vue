@@ -2,8 +2,6 @@
 <div class="thipage" :style="{height:$store.state.height}">
     <div class="bg" :style="show" ref="move">
       <div class="bgbottom"></div>
-          <icon type="arrows" :width=300 :height=300 class="svg2"></icon>
-          <icon type="arrows" :width=300 :height=300 class="svg4" v-if="xian2"></icon>
     </div>
     <div class="touchbox"
     @touchstart='touchStart'
@@ -26,7 +24,6 @@
     <div class="photoWall" :style="photoWall" @click="openDialog(0)">
       <h3 class="svgh1">工作室照片</h3>
     </div>
-    <icon type="arrows" :width=200 :height=200 class="svg1" v-if="xian1"></icon>
     <div class="proWall" :style="[proboard]" @click="openDialog(1)">
       <h3 class="svgh4">成员生活照</h3>
     </div>
@@ -120,31 +117,30 @@ export default {
                         this.xian1=false;
                       }, 100)
                     this.xian2 = true;
-                    if(this.disX <= -btnWidth) {
+                    if(this.disX <= -(btnmove/6)) {
                     this.show = 'transform:translateX('+(btnWidth-btnmove)+'px)';
                     this.photoWall = 'transform:translateX('+(btnWidth-btnmove)+'px)';
                     this.proboard.transform = 'translateX('+ 0 +'px)';
-                    }
-                }else if(this.disX>0){
+                    }else{}
+                }else if(this.disX>(btnWidth/3)){
                     this.show = 'transform:translateX(0px)';
                     this.photoWall = 'transform:translateX(0px)';
                     this.proboard.transform = 'translateX('+ (btnWidth) +'px)';
                 }
             }
-        },
-        touchEnd(ev){
+        },touchEnd(ev){
             ev = ev || event;
             ev.preventDefault();
-                    let btnWidth = this.$refs.remove.offsetWidth;
-                    let btnmove = this.$refs.move.offsetWidth;
+                    let btnWidth = this.$refs.remove.offsetWidth;   //小的
+                    let btnmove = this.$refs.move.offsetWidth;    //大的
                 if(ev.changedTouches.length == 1) {
                     let endX = ev.changedTouches[0].clientX;
                     this.disX = endX-this.startX;
-                    if(this.disX < -(btnmove/6)) {
+                    if(this.disX <= -(btnmove/6)) {
                     this.show = "transform:translateX("+(btnWidth-btnmove)+ "px)";
                     this.photoWall = "transform:translateX("+(btnWidth-btnmove)+ "px)";
                     this.proboard.transform = 'translateX('+ 0 +'px)';
-                        }else{
+                        }else if(this.disX >= (btnmove/6)){
                     this.show = 'transform:translateX(0px)';
                     this.photoWall = 'transform:translateX(0px)';
                     this.proboard.transform = 'translateX('+ btnWidth +'px)';
@@ -152,6 +148,14 @@ export default {
                         this.xian1=true;
                         this.xian2=false;
                       }, 900)
+                    }else if(this.disX <= 0){
+                        this.show = 'transform:translateX(0px)';
+                    this.photoWall = 'transform:translateX(0px)';
+                    this.proboard.transform = 'translateX('+ btnWidth +'px)';
+                    }else{
+                      this.show = "transform:translateX("+(btnWidth-btnmove)+ "px)";
+                    this.photoWall = "transform:translateX("+(btnWidth-btnmove)+ "px)";
+                    this.proboard.transform = 'translateX('+ 0 +'px)';
                     }
               }
         }
